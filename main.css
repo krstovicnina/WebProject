@@ -1,0 +1,506 @@
+* {
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	font-family: 'Times New Roman';
+	background-image: url("Travels/backgroung.png");
+	background-position: bottom;
+	background-color: #a9c9ee;
+	display: inline-block;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+hr {
+	background-color: #EF9C00; 
+	height: 10px;
+}
+
+.wrapper > footer {
+	text-align: center; 
+	color: #124e92; 
+	background-color:#a9c9ee;
+}
+	
+#main { 
+	padding: 15 0px; 
+	margin: 0px auto; 
+	width: 1100px;
+}
+
+#first {
+	width: 100%; 
+	height: 100px; 
+	display: inline-block; 
+	background-image: url("Travels/quote.jpg");
+	background-repeat: no-repeat; 
+	height: 100%;
+	width: 100%; 
+	background-position: bottom;
+}
+
+#cleaner {
+	clear: both;
+}
+
+#logo {
+	float: left; 
+	width: 100px;
+}
+
+#title{
+	float: left; 
+	padding-top: 45px; 
+	padding-left: 10px;
+}
+
+#title > h1 {
+	color: #124e92; 
+	text-align: center; 
+	font-family: 'Times New Roman';	
+}
+
+#second {
+	height:450px; 
+	width: 100%;
+}
+
+#minisecond {
+	height:200px; 
+	width: 100%;
+}
+
+#schoolimage {
+	display:inline-block; 
+	height:450px; 
+	vertical-align:top;
+}
+
+#schoolimage > img {
+	display:inline-block; 
+	float:right; 
+	width:200px;
+}
+
+#text {
+	display:inline-block; 
+	float:left;
+	margin: 0px 15px 0px 5px; 
+	background: rgba(88, 104, 245, 0.7)
+}
+
+#menus {
+	float:right;  
+	width:300px; 
+	vertical-align:top; 
+	display:inline-block; 
+	height:auto;
+}
+
+#menu {
+	float:right;
+}
+
+		#menu {
+				width: 12em; 
+				border-right: 1px solid #000; 
+				padding: 0 0 1em 0;
+				margin-bottom: 1em; 
+				font-family: Times New Roman; 
+				background-color: #EF9C00;
+				color: #00FF00;
+			}
+		#menu ul {
+				list-style: none; 
+				margin: 0;
+				padding: 0;
+				border: none;
+			}
+		#menu li {
+				border-bottom: 1px solid #90bade;
+				margin: 0;
+			}
+		#menu li a {
+				display: block; 
+				padding: 5px 5px 5px 0.5em; 
+				border-left: 10px solid #1958b7;
+				border-right: 10px solid #508fc4; 
+				background-color: #2175bc; 
+				color: #fff;
+				text-decoration: none; 
+				width: 100%;
+			}
+		#menu li a {
+				width: auto;
+			}	
+		#menu li a:hover { 
+				border-left: 10px solid #1c64dl; 
+				border-right: 10px solid #5ba3e0;
+				background-color: #2586d7; 
+				color: #EF9C00;
+			}
+
+
+#share-buttons img {
+	width: 35px;
+	padding: 5px; 
+	border: 0; 
+	box-shadow: 0;
+	display: inline; 
+	float:center;  
+}
+
+#share-buttons {
+	float: right;
+}
+
+#image > img {
+	float:center;
+	width:390px; 
+}
+
+.mySlides {
+	display:none; 
+	float:left;
+	padding: 5px 5px 5px 0.5em;
+	border-left: 10px solid #1958b7; 
+	border-top: 10px solid #1958b7;
+	border-right: 10px solid #508fc4;
+	border-bottom: 10px solid #508fc4;
+	display:inline-block;
+}
+
+#form {
+	display:inline-block;
+	margin-bottom: 10px;
+	float: center;
+	padding-top: 10px;
+	padding-left: 10px;
+	margin: 20px 0px;
+    height: auto;
+	width: 50%;
+	border-bottom: 3px solid rgba(85, 76, 207, 0.5);
+	border-left: 3px solid rgba(85, 76, 207, 0.5);
+	background: rgba(25, 88, 183, 0.3);
+}
+	
+.bgimg {
+	background-image:url("Travels/back1.jpg");
+	height: 440px;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	color: #000033;
+    font-size: 25px;
+}
+
+
+.topleft {
+	position: absolute;
+	top: 0;
+	left: 16px;
+}
+
+
+.bottomleft {
+	position: absolute;
+	bottom: 0;
+	left: 16px;
+}
+
+
+.middle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+
+#aboutwebsite {
+	float:left;
+	display:inline-block;
+	color: white; 
+	background:rgba(25, 88, 183, 0.6);
+	width:700;
+}	
+
+#aboutwebsite > h2 {
+	margin-top:10px; 
+	margin-bottom:10px; 
+	margin-left:20px;
+}
+
+#aboutwebsite > h3{
+	margin-bottom:10px;
+	margin-left:10px;
+}
+
+#aboutwebsite > form > button {
+	float:right;
+	display: inline-block; 
+	padding: 5px 5px 5px 0.5em; 
+	border-left: 5px solid #1958b7;
+	border-right: 5px solid #508fc4; 
+	background-color: #2175bc;
+	color: #fff; 
+	width: auto; 
+	margin-left:10px;
+	margin-top:10px;
+}
+ 
+
+ 
+.smaller {
+        
+		}
+
+			.smaller .smaller {
+				width: calc(34% - 30px);
+				margin: 0px 15px 35px 5px;
+				display: inline-block;
+				vertical-align: top;
+                background: rgba(88, 104, 245, 0.3);
+			}
+	
+				.smaller .smaller > header {
+					border-bottom: 10px solid #EF9C00;
+					margin-bottom: 20px;
+					padding: 20px 0px;
+					text-align: center;
+				}
+
+					.smaller .smaller > header > h2 {
+						display: inline-block;
+						margin-left: 10px;
+						margin-top: 2px;
+						font-size: 16pt;
+						color: white;
+					}
+					
+					.smaller.smaller > .smaller-main {
+						margin-bottom: 10px;
+						float: center;
+						padding-top: 10px;
+						padding-left: 10px;
+			            margin: 20px 0px;
+			            min-height: 10px;
+			            height: auto;
+			            width: 100%;
+						border-bottom: 3px solid rgba(85, 76, 207, 0.3);
+						background: rgba(25, 88, 183, 0.8);
+					}
+					
+					  .smaller.smaller > .smaller-main > img {
+						display: inline-block;
+						float: center;
+						height: 170px;
+						width: 320px;
+					  }
+					  
+                    .smaller.smaller > .smaller-main > img:hover {
+						opacity: 0.7;
+					}
+					  
+                    .smaller.smaller > p > a {
+						float:right;
+						display: block; 
+						padding: 5px 5px 5px 0.5em; 
+						border-left: 10px solid #1958b7;
+				        border-right: 10px solid #508fc4; 
+						background-color: #2175bc; 
+						color: #fff;
+				        text-decoration: none; 
+						width: auto;
+					}
+					  
+					.smaller.smaller > p > a:hover { 
+					     border-left: 10px solid #1c64dl; 
+						 border-right: 10px solid #5ba3e0;
+						 background-color: #2586d7; 
+						 color: #EF9C00;
+			        }        
+					
+#fourth {
+	
+}
+
+#fourth > form > table{
+	background-color: rgba(85, 76, 207, 0.3);
+}
+
+.title{ 
+	background-color:rgba(25, 88, 183, 0.8); 
+	text-transform:uppercase; 
+	color:#FFF;
+}
+
+.button{
+	float:right;
+	display: inline-block;
+	padding: 5px 5px 5px 0.5em;
+	border-left: 5px solid #1958b7;
+	border-right: 5px solid #508fc4; 
+	background-color: #2175bc;
+	color: #fff;
+	width: auto;
+	margin-left:10px; 
+	margin-top:10px;
+}
+
+#panel, #flip {
+	padding: 5px;
+	text-align: center;
+	background-color: #508fc4;
+	border: solid 3px #2175bc;
+	vertical-align:top;
+	color:white;
+}
+
+#panel {
+	padding: 10px;
+	display: none;
+	vertical-align:top;
+}
+
+.thumbnails img {
+        height: 80px;
+        border: 4px solid #1958b7;
+        padding: 1px;
+        margin: 0 5px 5px 0;
+      }
+
+      .thumbnails img:hover {
+        border: 4px solid #EF9C00;
+        cursor:pointer;
+      }
+
+      .preview img {
+        border: 4px solid #1958b7;
+        padding: 1px;
+        width: 350px;
+      }
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1000px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+  float:center;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -50px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	-webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}

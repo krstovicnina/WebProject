@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>School Travel</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+	<script language="JavaScript">
+	     function bigImage(x){
+	    x.style.height = "64px"
+		x.style.width = "64px"
+	 }
+
+     function normalImg(x){
+	    x.style.height = "32px"
+		x.style.width = "32px"
+	 }
+	 
+
+	        var imgObj = null;
+            
+            function init(){
+               imgObj = document.getElementById('myImage');
+               imgObj.style.position= 'relative'; 
+               imgObj.style.left = '0px'; 
+            }
+            
+            function moveRight(){
+               imgObj.style.left = parseInt(imgObj.style.left) + 15 + 'px';
+            }
+			   
+            function moveLeft(){
+               imgObj.style.left = parseInt(imgObj.style.left) - 15 + 'px';
+            }
+			
+            window.onload =init;
+
+	</script> 
+</head>
+<body>
+    <section class="wrapper">
+    <div id="main">
+	        <div id="first">
+		        <div id="logo">
+		            <img src="Travels/logo.png" width="100" height="100">
+		        </div>
+		        <div id="title">
+		            <h1>School Travel</h1>
+		        </div>
+			    <div id="cleaner"></div>
+		    </div>
+		    <hr>
+			<br>
+	     <div id="second">
+		    <div id="aboutwebsite">
+			    <h2> About this website </h2>
+				<form>
+                     <img id="myImage" src="Travels/web.png"/>
+					 <br>
+					 <input type="button" class="button" value="Move me to the right" onclick="moveRight();" />
+                     <input type="button" class="button" value="Move me to the left" onclick="moveLeft();" />
+                 </form>
+				<h3> <br><br> This website was made as a final project for Web programming and design course <br> thought on the Technical faculty of the Singidunum University. <br>
+			        The author of the website is Nina Krstovic, 2018/230089, SDE. <br>
+					
+				</h3>
+            </div>		
+			<div id="menus">
+			    <div id="menu">
+			        <ul>
+					    <li><a href="index.html">Home</a></li>
+						<li><a href="register.html">Registration for travel </a></li>
+			            <li><a href="about.html">About</a></li>
+			        </ul>
+			    </div>
+				<div id="share-buttons">
+				    <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
+                         <img onmouseover="bigImage(this)" onMouseOut="normalImg(this)" src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" width="32" height="32" />
+					</a>
+					<a href="https://plus.google.com/share?url=https://simplesharebuttons.com" target="_blank">
+                         <img onMouseOver="bigImage(this)" onMouseOut="normalImg(this)" src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" width="32" height="32" />
+                    </a>
+					<a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com">
+                         <img onMouseOver="bigImage(this)" onMouseOut="normalImg(this)" src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" width="32" height="32"/>
+                    </a>
+					<a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
+                         <img onMouseOver="bigImage(this)" onMouseOut="normalImg(this)" src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" width="32" height="32"/>
+                    </a>
+					<a href="http://www.tumblr.com/share/link?url=https://simplesharebuttons.com&amp;title=Simple Share Buttons" target="_blank">
+                         <img onMouseOver="bigImage(this)" OnMouseOut="normalImg(this)" src="https://simplesharebuttons.com/images/somacro/tumblr.png" alt="Tumblr" width="32" height="32"/>
+                    </a>
+				</div>
+				<div id="image">
+				    <img src="Travels/design.png" onMouseOver="this.src='Travels/designA.png'" onmouseout="this.src='Travels/design.png'"/>
+				</div> 
+			</div>	
+				<div id="cleaner"></div>
+	    </div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+		<footer>
+		    This site has been produced for an exam assignment and it ISN'T a real travel agency website! | Design: <a href="about.html">Nina Krstovic</a> | Year: 2019.
+	    </footer>
+	</section>
+</body>
+</html>	

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>School Travel</title>
+   <link rel="stylesheet" type="text/css" href="main.css">
+
+    <script language="JavaScript">
+
+	var myIndex = 0;
+    view();
+
+   function view(){
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+	for (i = 0; i < x.length; i++) {
+	    x[i].style.display ="none";
+	}
+	myIndex++;
+	if (myIndex > x.length) {myIndex = 1}
+	x[myIndex-1].style.display = "block";
+	setTimeout(view,3000); 
+}
+
+     function bigImage(x){
+	    x.style.height = "64px"
+		x.style.width = "64px"
+	 }
+
+     function normalImg(x){
+	    x.style.height = "32px"
+		x.style.width = "32px"
+	 }
+	
+
+    function check_nameLastname(){
+                    var nameLastname = document.getElementById('tbNameLastname');
+                    var NameLastnameL = document.getElementById('NameLastname');
+                    var regNameLastname = /^[A-Z][a-z]{2,19}\s[A-Z][a-z]{3,29}$/;
+
+					if (!regNameLastname.test(nameLastname.value)) {
+						NameLastnameL.style.color="red";
+						NameLastnameL.innerHTML = "Incorrect format! Please provide your first and last name beginning with a capital letter.";
+					} else {  
+					    NameLastnameL.style.color="white";
+						NameLastnameL.innerHTML="The format is correct."; 
+					}
+	}
+	
+    		function check_mail(){
+                    var mail = document.getElementById('tbmail');
+                    var mailL = document.getElementById('EMail');
+                    var regMail = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+
+					if (!regMail.test(mail.value)) {
+						mailL.style.color="red";
+						mailL.innerHTML = "The format is incorrect!";
+					} else { 
+					    mailL.style.color="white";
+						mailL.innerHTML="The format is correct."; 
+
+					}
+	        }
+			
+			function check_message() {
+			    var message = document.getElementById('taComment').value;
+				var messageL = document.getElementById('Message');
+				     if (message.trim() == '')
+					 {
+					    messageL.style.color="red";
+						messageL.innerHTML = "You haven't entered a message!";
+					 } else {
+					    messageL.style.color="white";
+						messageL.innerHTML="You have entered the messsage correctly."; 
+					 }
+			}
+
+            function send(){
+			    var errors = [];
+				
+				    var nameLastname = document.getElementById('tbNameLastname');
+                    var regNameLastname = /^[A-Z][a-z]{2,19}\s[A-Z][a-z]{3,29}$/;
+
+					if (!regNameLastname.test(nameLastname.value)) {
+						errors.push("Name!");}
+				
+			        var mail = document.getElementById('tbmail');
+                    var regMail = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+
+					if (!regMail.test(mail.value)) {
+						errors.push("Email!");}
+
+					var message=document.getElementById('taComment').value;
+				     if (message.trim() == '')
+					 {
+					    errors.push("Message!");
+					 }
+				
+                if (errors.length!=0){
+				    alert("You haven't filled out the form correctly!");}
+                else {					
+			     var sending = "mailto:websiteschooltravel123@gmail.com?subject=Message&body=Name: "+tbNameLastname+"%0D%0A"+"Email: "+tbmail+"%0D%0A"+'Message'+taComment;
+				 window.location.href = sending;
+				 alert("Your message has been successfully sent!");
+				 }
+			}
+
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySliders");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+			
+    </script>
+</head>
+<body onLoad="view()">
+    <section class="wrapper">
+        <div id="main">
+	        <div id="first">
+		        <div id="logo">
+		            <img src="Travels/logo.png" width="100" height="100">
+		        </div>
+		        <div id="title">
+		            <h1>School Travel</h1>
+		        </div>
+			    <div id="cleaner"></div>
+		    </div>
+		    <hr>
+			<br>
+		<div id="second">
+		    <div class="slider-section" style="max-width:800px">
+			     <img class="mySlides" src="Slider/1.jpg" style="width:700px; height:400px;">
+				 <img class="mySlides" src="Slider/2.jpg" style="width:700px; height:400px;">
+				 <img class="mySlides" src="Slider/3.jpg" style="width:700px; height:400px;">
+            </div>		
+			<div id="menus">
+			    <div id="menu">
+			        <ul>
+					    <li><a href="index.html">Home</a></li>
+						<li><a href="register.html">Registration for travel</a></li>
+			            <li><a href="about.html">About</a></li>
+			        </ul>
+			    </div>
+				<div id="share-buttons">
+				    <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
+                         <img onmouseover="bigImage(this)" onMouseOut="normalImg(this)" src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" width="32" height="32" />
+					</a>
+					<a href="https://plus.google.com/share?url=https://simplesharebuttons.com" target="_blank">
+                         <img onMouseOver="bigImage(this)" onMouseOut="normalImg(this)" src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" width="32" height="32" />
+                    </a>
+					<a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com">
+                         <img onMouseOver="bigImage(this)" onMouseOut="normalImg(this)" src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" width="32" height="32"/>
+                    </a>
+					<a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
+                         <img onMouseOver="bigImage(this)" onMouseOut="normalImg(this)" src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" width="32" height="32"/>
+                    </a>
+					<a href="http://www.tumblr.com/share/link?url=https://simplesharebuttons.com&amp;title=Simple Share Buttons" target="_blank">
+                         <img onMouseOver="bigImage(this)" OnMouseOut="normalImg(this)" src="https://simplesharebuttons.com/images/somacro/tumblr.png" alt="Tumblr" width="32" height="32"/>
+                    </a>
+				</div>
+				<div id="image">
+				    <img src="Travels/imagee.png">
+				</div>
+			</div>	
+				<div id="cleaner"></div>
+	    </div>
+		    <div id="third">
+			    <div id="cleaner"></div>
+		         <div class="smaller">
+					<article class="smaller">
+						<header>
+							<h2>Italy</h2>
+						</header>
+
+						<div class="smaller-main">
+							<img src="Home/italy1.jpg" onclick="openModal();currentSlide(1)"  class="hover-shadow" alt="Italy"/>
+						</div>
+
+						<p><a href="Italy.html" class="smaller-button">More</a></p>
+					</article>
+
+					<article class="smaller">
+						<header>
+							<h2>Prague, Czech Republic</h2>
+						</header>
+					
+						<div class="smaller-main">
+							<img src="Home/prague1.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow" alt="Prague"/>
+						</div>
+
+						<p><a href="Prague.html" class="smaller-button">More</a></p>
+					</article>
+
+					<article class="smaller">
+						<header>
+                             <h2>Krakow, Poland</h2>
+						</header>
+                    
+						<div class="smaller-main">
+							<img src="Home/krakow1.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow" alt="Krakow"/>
+						</div>
+
+						<p><a href="Krakow.html" class="smaller-button">More</a></p>
+					</article>
+					<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySliders">
+      <div class="numbertext">1 / 3</div>
+        <img src="Home/italy2.jpg" style="width:100%" alt="Italy">
+    </div>
+
+    <div class="mySliders">
+      <div class="numbertext">2 / 3</div>
+        <img src="Home/prague2.jpg" style="width:100%" alt="Prague">
+    </div>
+
+    <div class="mySliders">
+      <div class="numbertext">3 / 3</div>
+        <img src="Home/krakow2.jpg" style="width:100%" alt="Krakow">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+		</div>
+		    </div>
+			<div id="fourth">
+                 <form name="form">
+                    <table style="width:600px; margin:10px auto; border:2px solid #124e92;">
+                    <tr>
+                        <th colspan="3" class="title">Contact us</th>
+                    </tr>
+		   
+                        <tr>
+                             <td class="title"><font size="4" color="white">First and Last name:</font></td>
+                             <td>
+                                 <input type="text" class="text-box" id="tbNameLastname" onkeyup="check_nameLastname();"/>
+                                 <br><span id="NameLastname"></span>
+                                 </td>
+				            <td id="message"><font size="4" color="white">Message:</font></td>
+                        </tr>
+                        <tr>
+                            <td class="title"><font size="4" color="white">Email:</font></td>
+                            <td><input type="text" class="text-box" id="tbmail" onkeyup="check_mail();" />
+                            <br><span id="EMail"></span>
+                            </td>
+				            <td align="center">
+				                <textarea id="taComment" name="Comment" onkeyup="check_message();"></textarea>
+								<br>
+								<span id="Message"></span>
+				            </td>
+                        </tr>
+						<tr>
+                            <td id="buttons" colspan="2" align="center">
+                                <input type="button" value="Send" class="button" onClick="send();"/>
+                                <input type="reset" value="Reset" class="button "/>
+                            </td>
+                        </tr>
+                     </table>
+                </form>
+			</div>
+		</div>
+	    <footer>
+		    This site has been produced for an exam assignment and it ISN'T a real travel agency website! | Design: <a href="about.html">Nina Krstovic</a> | Year: 2019.
+	    </footer>
+    </section>
+</body>
+</html>

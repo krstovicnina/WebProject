@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>School Travel</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script language="JavaScript">
+	     function bigImage(x){
+	    x.style.height = "64px"
+		x.style.width = "64px"
+	 }
+
+     function normalImg(x){
+	    x.style.height = "32px"
+		x.style.width = "32px"
+	 }
+	 
+	 $(document).ready(function(){
+    $("button").click(function(){
+        $("#div1").fadeToggle();
+    });
+});
+    
+var countDownDate = new Date("Feb 25, 2019 15:37:25").getTime();
+
+
+var countdownfunction = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = countDownDate - now; 
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+	
+	</script> 
+</head>
+<body>
+    <section class="wrapper">
+        <div id="main">
+	        <div id="first">
+		        <div id="logo">
+		            <img src="Travels/logo.png" width="100" height="100">
+		        </div>
+		        <div id="title">
+		            <h1>School Travel</h1>
+		        </div>
+			    <div id="cleaner"></div>
+		    </div>
+		    <hr>
+			<br>
+	     <div id="second">
+		    <div id="schoolimage">
+			    <img src="Travels/image11.png">
+				<br>
+				<button style="color: blue; background-color:white;">Click me!</button><br>
+                <div id="div1" style="width:150px;height:130px;display:none;background-color:#EF9C00; color:white;"> Make a reservation for a desied destination until 25th February and you will get a bonus!</div><br>
+			</div>
+		    <div id="form">
+			    <div class="bgimg">
+                    <div class="topleft">
+                   <p>Online registration</p>
+                   </div>
+                   <div class="middle">
+                   <h1>COMING SOON</h1>
+                   <hr>
+                   <p id="demo" style="font-size:30px"></p>
+                   </div>
+                  <div class="bottomleft">
+                  <p>Thank you for your trust!<br>For any additional information contact us through the form provided on the Home page.</p>
+                  </div>
+               </div>
+            </div>
+        	
+			<div id="menus">
+			    <div id="menu">
+			        <ul>
+					    <li><a href="index.html">Home</a></li>
+						<li><a href="register.html">Register for travel</a></li>
+			            <li><a href="about.html">About</a></li>
+			        </ul>
+			    </div>
+				<div id="share-buttons">
+				    <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
+                         <img onmouseover="bigImage(this)" onMouseOut="normalImg(this)" src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" width="32" height="32" />
+					</a>
+					<a href="https://plus.google.com/share?url=https://simplesharebuttons.com" target="_blank">
+                         <img onMouseOver="bigImage(this)" onMouseOut="normalImg(this)" src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" width="32" height="32" />
+                    </a>
+					<a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com">
+                         <img onMouseOver="bigImage(this)" onMouseOut="normalImg(this)" src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" width="32" height="32"/>
+                    </a>
+					<a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
+                         <img onMouseOver="bigImage(this)" onMouseOut="normalImg(this)" src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" width="32" height="32"/>
+                    </a>
+					<a href="http://www.tumblr.com/share/link?url=https://simplesharebuttons.com&amp;title=Simple Share Buttons" target="_blank">
+                         <img onMouseOver="bigImage(this)" OnMouseOut="normalImg(this)" src="https://simplesharebuttons.com/images/somacro/tumblr.png" alt="Tumblr" width="32" height="32"/>
+                    </a>
+				</div>
+				<div id="image">
+				    <img src="Travels/s1.png"onMouseOver="this.src='Travels/s2.png'" onmouseout="this.src='Travels/s1.png'"/>
+				</div>
+			</div>	
+				<div id="cleaner"></div>
+	    </div>
+	    </div>
+		<br>
+		<br>
+		<footer>
+		    This site has been produced for an exam assignment and it ISN'T a real travel agency website! | Design: <a href="about.html">Nina Krstovic</a> | Year: 2019.
+	    </footer>
+	</section>
+</body>
+</html>	

@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>School Travel</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
+    <script language="JavaScript">
+	     function bigImage(x){
+	    x.style.height = "64px"
+		x.style.width = "64px"
+	    }
+
+     function normalImg(x){
+	    x.style.height = "32px"
+		x.style.width = "32px"
+	 }
+
+	 $(document).ready(function(){
+	    $("#flip").click(function(){
+		   $("#panel").slideToggle("slow");
+		});
+	 });	
+	 
+	  function small(x){
+	    x.style.height = "100px"
+		x.style.width = "100px"
+	 }
+
+ $(function(){
+    $('.thumbnails img').hover(function(){
+        $('#preview').attr('src',$(this).attr('src'));
+    },null);
+});
+	 
+	 
+	</script> 
+</head>
+<body>
+    <section class="wrapper">
+    <div id="main">
+	        <div id="first">
+		        <div id="logo">
+		            <img src="Travels/logo.png" width="100" height="100">
+		        </div>
+		        <div id="title">
+		            <h1>School Travel</h1>
+		        </div>
+			    <div id="cleaner"></div>
+		    </div>
+		    <hr>
+			<br>
+	    <div id="minisecond">
+		    <div id="text">
+			    <font color="white"> 
+			    <h1><b>Prague, Czech Repubic</b></h1>
+				<br>
+				    <p> The trip lasts 7 days. The journey starts in the evening hours.<br>
+					The price of the travel depends on the term of its start as well as on the number of students registered. <br>
+					With every 20 people registered a bonus free travel is given. <br>For more detailed information please contact us through the provided form.<br>
+					</p>
+					<br>
+				</font> 
+            </div>		
+			<div id="menus">
+			    <div id="menu">
+			        <ul>
+					    <li><a href="index.html">Home</a></li>
+						<li><a href="register.html">Register for travel</a></li>
+			            <li><a href="about.html">About</a></li>
+			        </ul>
+			    </div>
+				<div id="share-buttons">
+				    <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
+                         <img onmouseover="bigImage(this)" onMouseOut="normalImg(this)" src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" width="32" height="32" />
+					</a>
+					<a href="https://plus.google.com/share?url=https://simplesharebuttons.com" target="_blank">
+                         <img onMouseOver="bigImage(this)" onMouseOut="normalImg(this)" src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" width="32" height="32" />
+                    </a>
+					<a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com">
+                         <img onMouseOver="bigImage(this)" onMouseOut="normalImg(this)" src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" width="32" height="32"/>
+                    </a>
+					<a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
+                         <img onMouseOver="bigImage(this)" onMouseOut="normalImg(this)" src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" width="32" height="32"/>
+                    </a>
+					<a href="http://www.tumblr.com/share/link?url=https://simplesharebuttons.com&amp;title=Simple Share Buttons" target="_blank">
+                         <img onMouseOver="bigImage(this)" OnMouseOut="normalImg(this)" src="https://simplesharebuttons.com/images/somacro/tumblr.png" alt="Tumblr" width="32" height="32"/>
+                    </a>
+				</div>
+			</div>	
+	    </div>
+             <div id="treci">
+			    <div id="flip">Click here to see the gallery</div>
+				<div id="panel">
+		             <div class="gallery" align="center">
+                        <div class="thumbnails">
+                            <img onmouseover="preview.src=img1.src" id="img1" src="Prague/1.jpg" alt="Image Not Loaded"/>
+                            <img onmouseover="preview.src=img2.src" id="img2" src="Prague/2.jpg" alt="Image Not Loaded"/>
+                            <img onmouseover="preview.src=img3.src" id="img3" src="Prague/3.jpg" alt="Image Not Loaded"/>
+                            <img onmouseover="preview.src=img4.src" id="img4" src="Prague/4.jpg" alt="Image Not Loaded"/>
+                            <img onmouseover="preview.src=img5.src" id="img5" src="Prague/5.jpg" alt="Image Not Loaded"/>
+                            <img onmouseover="preview.src=img6.src" id="img6" src="Prague/6.jpg" alt="Image Not Loaded"/>
+							<img onmouseover="preview.src=img7.src" id="img7" src="Prague/7.jpg" alt="Image Not Loaded"/>
+                            <img onmouseover="preview.src=img8.src" id="img8" src="Prague/8.jpg" alt="Image Not Loaded"/>
+                        </div><br/>
+                          
+                        <div class="preview" align="center">
+                            <img id="preview" src="Prague/1.jpg" alt="No Image Loaded"/>
+                        </div><br/>
+						
+                     </div>
+				</div>
+	        </div> 
+			<br>
+        <div id="third">
+			    <div id="cleaner"></div>
+		         <div class="smaller">
+				    
+					<article class="smaller">
+						<header>
+							<h2>See more...</h2>
+						</header>
+						<div class="smaller-main">
+							<img src="Travels/arrow.png">
+						</div>
+				     </article>
+					 
+					<article class="smaller">
+						<header>
+							<h2>Italy</h2>
+						</header>
+
+						<div class="smaller-main">
+							<img src="Home/italy1.jpg">
+						</div>
+
+						<p><a href="Italy.html" class="smaller-button">More</a></p>
+					</article>
+
+					<article class="smaller">
+						<header>
+                             <h2>Krakow, Poland</h2>
+						</header>
+                    
+						<div class="smaller-main">
+							<img src="Home/krakow1.jpg">
+						</div>
+
+						<p><a href="Krakow.html" class="smaller-button">More</a></p>
+					</article>
+				</div>
+		</div>		
+    </div>	
+ 			
+		
+		<footer>
+		    This site has been produced for an exam assignment and it ISN'T a real travel agency website! | Design: <a href="about.html">Nina Krstovic</a> | Year: 2019.
+	    </footer>
+	</section>
+</body>
+</html>	
